@@ -29,3 +29,5 @@ Deve essere possibile cancellare la prenotazione di un passeggero.
 Inoltre deve essere possibile sapere quanti posti liberi ci sono.
 
 ![alt text](Design.png)
+
+Significa che ci sono 5 posti per un tragitto 
