@@ -5,9 +5,7 @@ public class CarSharingApp {
     public static void main(String[] args){
 
         int i = 0;
-
         i+=5;
-
 
         Posto p = new Posto(Posto.ANTERIORE, Posto.Lato.SINISTRO, true);
         // il REFERENCE "p" punta all'oggeto di tipo "Posto"
