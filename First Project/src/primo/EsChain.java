@@ -42,7 +42,13 @@ public class EsChain {
 
         verifica(c.valore()==2, "Mi aspettavo 2");
 
+        StringBuilder sb = new StringBuilder();
+        
+        for ( int i=0; i<100; ++i){
+            sb.append(i);
+        }
 
+        System.out.println(sb);
     }
 
     public static void verifica(boolean b, String msg){
