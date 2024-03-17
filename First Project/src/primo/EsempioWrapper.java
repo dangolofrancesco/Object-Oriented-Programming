@@ -12,7 +12,6 @@ public class EsempioWrapper {
             System.out.println(acc);
             long t1 = System.currentTimeMillis();
             System.out.println("Elapsed int: " + (t1-t0));
-            System.out.println("Ciao");
         }
         {
             long t0 = System.currentTimeMillis();
