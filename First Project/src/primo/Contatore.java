@@ -21,6 +21,9 @@ public class Contatore {
         return this;
     }
 
+    //Ritorna se stesso in modo che metodi concatenati lavorino sullo stesso oggetto
+    //null specifica che non c'è riferimento ad alcun oggetto, questo genera un'eccezione senza bloccare il programma in esecuzione
+
     public void undo(){
       // pesca l'ultima operazione dalla cima dello stack delle operazioni passate
       // applica al contrario l'operazione
