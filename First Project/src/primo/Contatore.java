@@ -4,30 +4,50 @@ public class Contatore {
 
     private int valore = 0;
 
-    public void inc() {
+
+    public Contatore inc() {
         valore++;
+        pushOp('+');
+        return this;
     }
 
     public int valore() {
         return valore;
     }
 
-    public void dec() {
-       valore--;
-    }
-
-    public Contatore incCont(){
-        valore++;
-        //return null; // because it has to return a Contatore value!!
-        return this; // restituisce se stesso, in modo che metodi concatenati lavorano sullo stesso oggetto!!
-    }
-
-    public Contatore decCont(){
+    public Contatore dec() {
         valore--;
-        //return null; // because it has to return a Contatore value!!
+        pushOp('-');
         return this;
     }
 
-    // Use null to specify the reference to no object!! It generates an exeption
-    // but it doesn't block the program
+    public void undo(){
+      // pesca l'ultima operazione dalla cima dello stack delle operazioni passate
+      // applica al contrario l'operazione
+      ops[top].undo();
+    }
+
+    Operazione[] ops = new Operazione[100];
+    int top = -1;
+
+    void pushOp(char op){
+        new Operazione(op);
+    }
+
+    class Operazione { // Inner class (con link al contenitore)
+        final char op;
+        Operazione(char op){
+            this.op = op;
+            ops[++top] = this;
+        }
+        void undo(){
+            switch (op) {
+                case '+': valore--;
+                    break;
+                case '-': valore++;
+                    break;
+            }
+            top--;
+        }
+    }
 }
