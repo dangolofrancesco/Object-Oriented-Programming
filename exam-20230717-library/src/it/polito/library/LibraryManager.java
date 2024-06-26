@@ -1,7 +1,5 @@
 package it.polito.library;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -19,8 +17,6 @@ public class LibraryManager {
 	Map<String, Book> titles;
 	Map<String, List<Book>> books;
 	Map<String, Reader> readers;
-
-	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 	int bookId = 1000;
 	int readerId = 1000;
