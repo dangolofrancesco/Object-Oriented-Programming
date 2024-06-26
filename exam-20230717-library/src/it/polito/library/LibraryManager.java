@@ -273,5 +273,4 @@ public class LibraryManager {
 		}
         return numberOfRentals;
     }
-
 }
